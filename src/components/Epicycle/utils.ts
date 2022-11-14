@@ -6,6 +6,7 @@ import piPath from './paths/pi.json';
 import summationPath from './paths/summation.json'
 import integralPath from './paths/integral.json';
 import zetaPath from './paths/zeta.json';
+import xPath from './paths/x.json';
 
 export interface EpicycleOps {
   x: number; 
@@ -36,7 +37,7 @@ export function processPath(pathJson: [number,number][]) : Fourier[] {
 
 export function getRandomCoords() : [number,number][] {
   // @ts-ignore
-  const paths: [number,number][][] = [piPath, summationPath, integralPath, zetaPath];
+  const paths: [number,number][][] = [piPath, summationPath, integralPath, zetaPath, xPath];
 
   return paths[Math.floor(Math.random() * paths.length)];
 
