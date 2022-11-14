@@ -22,8 +22,8 @@ function Home() {
         <h1> Recent Blogs</h1>
         <hr/>
         <div className="blog__preview-container">
-          <BlogPreview filename="the_quest_for_meaning"/>
           <BlogPreview filename="an_overkill_solution_to_a_complicated_sum"/>
+          <BlogPreview filename="feynman's_integration_technique"/>
         </div>
 
       </div>

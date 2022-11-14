@@ -1,5 +1,7 @@
 .blog-page-container {
   margin-top: 2rem;
+  max-width: clamp(50rem, 70vw, 80rem);
+
 
   .blog-page-container__info {
     display: flex;
@@ -28,11 +30,25 @@
       
       list-style: none;
     }
+    margin-bottom: 1.2rem;
   }
 
   p {
     font-weight: 100;
     margin: 1.5rem 0;
+  }
+
+  a {
+    color: #266D75;
+  }
+
+  h2 {
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+
+  h1 {
+    font-weight: 500;
   }
 }
 
