@@ -1,0 +1,25 @@
+
+.blog-preview-item {
+
+  background-color: #FFFFFF;
+  border: #656463 2px solid;
+
+  padding: 2rem;
+
+  h2 {
+    font-weight: 200;
+  }
+
+  &__tags {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  &:hover {
+    border-color: #89AEB2;
+    cursor: pointer;
+  }
+}
+
+

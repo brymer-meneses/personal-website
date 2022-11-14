@@ -1,0 +1,46 @@
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90vw;
+  max-width: 80rem;
+
+  margin-top: 1.5rem;
+
+  h3 {
+    font-weight: 200;
+  }
+
+  .nav__title {
+    background-color: #1E1E1E;
+    padding: 1rem;
+    color: #FFFFFF;
+    width: max-content;
+  }
+
+  .nav__links ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    list-style: none;
+
+    li {
+      cursor: pointer;
+      width: max-content;
+
+      &:hover {
+        color: #89AEB2;
+      }
+      font-weight: 200;
+    }
+  }
+
+
+
+}
+
+

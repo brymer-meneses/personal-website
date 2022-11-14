@@ -1,0 +1,38 @@
+.blog-page-container {
+  margin-top: 2rem;
+
+  .blog-page-container__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    // title
+    h1 {
+      font-weight: 500;
+      font-size: 2rem;
+    }
+
+    // date
+    h2 {
+      font-weight: 200;
+      font-size: 1.2rem;
+      color: #636565
+    }
+
+    // tags
+    .blog-page-item__tags {
+      display: flex;
+      flex-direction: row;
+      gap: 0.8rem;
+      color: #636565;
+      
+      list-style: none;
+    }
+  }
+
+  p {
+    font-weight: 100;
+    margin: 1.5rem 0;
+  }
+}
+

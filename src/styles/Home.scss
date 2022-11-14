@@ -1,0 +1,53 @@
+
+
+.home {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+
+    max-width: 80rem;
+    max-height: 50rem;
+    gap: 2rem;
+
+    h1 {
+      font-weight: 200;
+    }
+
+    .react-p5 {
+      max-width: 20rem;
+    }
+  }
+
+  .blog__dashboard {
+    display: flex;
+    flex-direction: column;
+    max-width: 80rem;
+
+    padding: 0 2rem;
+    width: 80vw;
+
+    .blog__preview-container {
+      margin-top: 1.25rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    h1 {
+      font-weight: 200;
+      font-size: 2.5rem;
+    }
+
+  }
+}
+
