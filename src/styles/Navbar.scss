@@ -32,10 +32,15 @@ nav {
       cursor: pointer;
       width: max-content;
 
-      &:hover {
-        color: #89AEB2;
+      a {
+        color: #1E1E1E;
+        font-weight: 200;
+        text-decoration: none;
+
+        &:hover {
+          color: #89AEB2;
+        }
       }
-      font-weight: 200;
     }
   }
 

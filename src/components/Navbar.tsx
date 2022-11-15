@@ -1,6 +1,8 @@
 
-import "../styles/Navbar.scss"
+import "../styles/Navbar.scss";
+import { Link } from 'react-router-dom';
 
+const githubLink = "https://www.github.com/brymer-meneses";
 
 function Navbar() {
   return (
@@ -8,8 +10,11 @@ function Navbar() {
       <h3 className="nav__title">Brymer Meneses</h3>
       <div className="nav__links"> 
         <ul>
-          <li>[ Github ]</li>
-          <li>[ About Me ]</li>
+          <li>
+            <a href={githubLink}> [ Github ]  </a></li>
+          <li>
+            <Link to="about-me"> [ About Me ] </Link>
+          </li>
         </ul>
       </div>
     </nav>

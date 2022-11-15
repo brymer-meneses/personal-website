@@ -1,5 +1,6 @@
 import BlogPreview from "./BlogPreview";
 import Epicycle from "./Epicycle/Epicycle";
+import ScrollDownIndicator from "./ScrollDownIndicator";
 
 import "../styles/Home.scss"
 
@@ -25,9 +26,9 @@ function Home() {
           <BlogPreview filename="an_overkill_solution_to_a_complicated_sum"/>
           <BlogPreview filename="feynman's_integration_technique"/>
         </div>
-
       </div>
 
+      <ScrollDownIndicator/>
     </section>
   )
   
