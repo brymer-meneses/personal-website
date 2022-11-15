@@ -180,11 +180,10 @@ function computeCartesianCoordinates(filename: number, ops: { numPoints: number,
 }
 
 function rotateCoordinates(coords: Coordinate[], angle: number) {
-  let phi = angle % 360;
   // Use the rotation matrix to rotate each point
   return coords.map((coord) => {
-    const x = coord.x * (Math.sin(phi) + Math.cos(phi));
-    const y = coord.y * (Math.cos(phi) - Math.sin(phi));
+    const x = coord.x * (Math.sin(angle) + Math.cos(angle));
+    const y = coord.y * (Math.cos(angle) - Math.sin(angle));
     return {x, y};
   })
 }
