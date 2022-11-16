@@ -21,8 +21,10 @@ export interface Path {
   y: number; 
 }
 
+// array of tuples
+export type RawPath = [number, number][];
 
-export function processPath(pathJson: [number,number][]) : Fourier[] {
+export function processPath(pathJson: RawPath) : Fourier[] {
   let fourierPath: Fourier[] = [];
   let complexPath: ComplexNumber[] = [];
 
@@ -35,9 +37,9 @@ export function processPath(pathJson: [number,number][]) : Fourier[] {
   return fourierPath;
 }
 
-export function getRandomCoords() : [number,number][] {
+export function getRandomCoords() : RawPath {
   // @ts-ignore
-  const paths: [number,number][][] = [piPath, summationPath, integralPath, zetaPath, xPath];
+  const paths: RawPath[] = [piPath, summationPath, integralPath, zetaPath, xPath];
 
   return paths[Math.floor(Math.random() * paths.length)];
 
