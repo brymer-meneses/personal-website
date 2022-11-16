@@ -15,6 +15,8 @@ import metadataParser from 'markdown-yaml-metadata-parser';
 
 import "../styles/Blog.scss"
 
+import CodeBlock from "./CodeBlock"
+
 interface BlogAttribute {
   created: string,
   tags: string,
@@ -54,7 +56,9 @@ function Blog() {
       </div>
       <ReactMarkdown children={content} 
                      rehypePlugins={[rehypeKatex]} 
-                     remarkPlugins={[remarkBreaks, remarkMath, remarkGfm]} />
+                     remarkPlugins={[remarkMath, remarkGfm]} 
+                     components={{ code: CodeBlock }}
+        />
     </section>
   )
 
