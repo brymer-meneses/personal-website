@@ -11,10 +11,9 @@ function Home() {
       <div className="hero">
         <Epicycle/>
         <div className="hero__info">
-          <h1> Hi there! </h1>
-          <h1> 
-            Welcome to my blog, <br/>
-            enjoy reading!
+          <h1> "Standing on the
+            <br/>
+            shoulders of giants"
           </h1>
         </div>
       </div>
