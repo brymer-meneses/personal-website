@@ -40,7 +40,7 @@ $$
 
 But how the heck would we integrate a function by $a+1$ times? Luckily some smart guy named Cauchy, came up with the following [formula](https://en.wikipedia.org/wiki/Cauchy_formula_for_repeated_integration). That is,
 $$
-\underbrace{\int_{a}^{x}\int_{a}^{\sigma_{1}}\cdots\int_{a}^{\sigma_{n-1}}}_{n\;\text{times}} f(x)~\text{d}x \cdot  
+\underbrace{\int_{a}^{x}\int_{a}^{\sigma_{1}}\cdots\int_{a}^{\sigma_{n-1}}}_{n\;\text{times}} f(x)~\text{d}x \text{d}x_{1} \ldots \text{d}x_{n-1}
     = \frac{1}{(n-1)!}\int_{a}^{x}(x-t)^{n-1}f(t)~\text{d}t \tag{3}
 $$
 
@@ -54,7 +54,7 @@ $$
 \end{align*}
 $$
 
-We denote $I_{1}$ and $I_{2}$ as follows, and solve them separetly.
+We denote $I_{1}$ and $I_{2}$ as follows, and solve them separately.
 $$
 \underbrace{\frac{1}{a!}\int_{0}^{1}(1-t)^{a-1}~\text{d}t}_{I_{1}} - \underbrace{\frac{1}{a!}\int_{0}^{1}(1-t)^{a-1}t^n~\text{d}t}_{I_{2}}
 $$
