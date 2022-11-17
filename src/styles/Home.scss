@@ -18,11 +18,10 @@
     h1 {
       font-weight: 200;
       font-style: italic;
-      z-index: 2;
     }
 
     .react-p5 {
-      max-width: 20rem;
+      width: clamp(10rem, 20vw, 20rem);
     }
   }
 
