@@ -1,9 +1,7 @@
-
 class ComplexNumber {
   re: number;
   im: number;
 
-  
   constructor(re: number, im: number) {
     this.re = re;
     this.im = im;
@@ -29,8 +27,6 @@ class ComplexNumber {
   angle(): number {
     return Math.atan2(this.im, this.re);
   }
-
-
 }
 
 export default ComplexNumber;

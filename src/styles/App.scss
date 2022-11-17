@@ -17,11 +17,17 @@ body {
   --gray: #334350;
 }
 
+::selection {
+  background: #89AEB2;
+}
+
 .App {
+  position:relative;
   display: flex;
   flex-direction: column;
   font-family: 'Fira Code', monospace;
   align-items: center;
   min-height: 100%;
   min-width: 100%;
+
 }

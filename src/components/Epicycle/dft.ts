@@ -14,7 +14,7 @@ export function dft(x: ComplexNumber[]): Fourier[] {
   let X = [];
   const N = x.length;
 
-  for (let k=0; k < N; k++) {
+  for (let k = 0; k < N; k++) {
     let sum = new ComplexNumber(0, 0);
 
     for (let n = 0; n < N; n++) {
@@ -26,15 +26,12 @@ export function dft(x: ComplexNumber[]): Fourier[] {
     sum.re = sum.re / N;
     sum.im = sum.im / N;
 
-    const freq = k
+    const freq = k;
     const amplitude = sum.magnitude();
     const phase = sum.angle();
 
-    X.push({ x: sum.re, y: sum.im, freq, amplitude, phase })
+    X.push({ x: sum.re, y: sum.im, freq, amplitude, phase });
   }
 
   return X;
 }
-
-
-  

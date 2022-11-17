@@ -1,4 +1,3 @@
-
 .scroll-down-indicator {
   position: sticky;
   bottom: 10px;
@@ -14,11 +13,11 @@
     display: block;
     width: 100%;
     height: 100%;
-    border-bottom: 2px solid #1E1E1E;
-    border-right: 2px solid #1E1E1E;
+    border-bottom: 2px solid #1e1e1e;
+    border-right: 2px solid #1e1e1e;
     animation: animate 1.5s linear infinite;
 
-    &:nth-child(1){
+    &:nth-child(1) {
       transform: translate(-15px, -15px);
       animation-delay: -0.4s;
     }

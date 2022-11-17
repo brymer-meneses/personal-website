@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar"
 import Home from "./components/Home"
 import Blog from "./components/Blog"
 import PageNotFound from "./components/PageNotFound";
+import AboutMe from "./components/AboutMe";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -14,6 +15,7 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path="/" element={<Home/>}></Route>
+          <Route path="/about-me" element={<AboutMe/>}></Route>
           <Route path="/blog/:title" element={<Blog/> }></Route>
           <Route path="*" element={ <PageNotFound/> }></Route>
         </Routes>

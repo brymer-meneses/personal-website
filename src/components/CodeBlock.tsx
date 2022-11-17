@@ -1,6 +1,6 @@
-import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
+import { PrismAsyncLight as SyntaxHighlighter} from 'react-syntax-highlighter'
 import { nord } from 'react-syntax-highlighter/dist/esm/styles/prism'
-import { CodeProps, CodeComponent } from 'react-markdown/lib/ast-to-react.js'
+import { CodeProps } from 'react-markdown/lib/ast-to-react.js'
 
 // I have no idea how the code below works, it was just taken from this guide:
 // https://github.com/remarkjs/react-markdown#use-custom-components-syntax-highlight

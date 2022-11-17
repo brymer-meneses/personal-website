@@ -37,7 +37,7 @@ export function processPath(pathJson: RawPath) : Fourier[] {
   return fourierPath;
 }
 
-export function getRandomCoords() : RawPath {
+export function getRandomCoords() {
   // @ts-ignore
   const paths: RawPath[] = [piPath, summationPath, integralPath, zetaPath, xPath];
 
