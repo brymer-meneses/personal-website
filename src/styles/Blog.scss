@@ -1,7 +1,6 @@
 .blog-page-container {
   margin-top: 2rem;
-  width: clamp(50rem, 70vw, 80rem);
-
+  width: clamp(400px, 50vw, 50rem);
 
   .blog-page-container__info {
     display: flex;
@@ -18,7 +17,7 @@
     h2 {
       font-weight: 200;
       font-size: 1.2rem;
-      color: #636565
+      color: #636565;
     }
 
     // tags
@@ -27,7 +26,7 @@
       flex-direction: row;
       gap: 0.8rem;
       color: #636565;
-      
+
       list-style: none;
     }
     margin-bottom: 1.2rem;
@@ -39,7 +38,7 @@
   }
 
   a {
-    color: #266D75;
+    color: #266d75;
   }
 
   h2 {
@@ -51,4 +50,3 @@
     font-weight: 500;
   }
 }
-

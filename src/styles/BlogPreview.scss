@@ -3,9 +3,15 @@
   border: #656463 2px solid;
 
   padding: 2rem;
+  width: clamp(15rem, 40vw, 40rem);
 
   h2 {
     font-weight: 200;
+    font-size: 1.2rem;
+  }
+
+  p {
+    color: #656463;
   }
 
   &__tags {

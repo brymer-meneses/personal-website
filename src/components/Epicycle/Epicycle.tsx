@@ -14,26 +14,27 @@ function Epicycle() {
   let time = 0;
   let wave: Path[] = [];
   let fourierPath: Fourier[];
-  let radius = (1.0 * window.innerHeight) / window.innerWidth;
-  let rawPath = getRandomCoords();
+  let radius: number;
 
   const windowResize = (p5: p5Types) => {
-    p5.resizeCanvas(window.innerWidth / 4, window.innerHeight / 2);
-    radius = (1.0 * window.innerHeight) / window.innerWidth;
+    p5.resizeCanvas(window.innerWidth / 2, window.innerHeight / 2);
+    resetDrawing();
   };
 
   const setup = (p5: p5Types, canvasParentRef: Element) => {
-    p5.createCanvas(window.innerWidth / 4, window.innerHeight / 2).parent(
+    p5.createCanvas(window.innerWidth / 2, window.innerHeight / 2).parent(
       canvasParentRef
     );
     p5.background("#F4F4F0");
-    fourierPath = processPath(rawPath);
+    resetDrawing();
   };
 
   const resetDrawing = () => {
-    fourierPath = processPath(getRandomCoords());
+    radius = 0.5;
+
     time = 0;
     wave = [];
+    fourierPath = processPath(getRandomCoords());
   };
 
   const draw = (p5: p5Types) => {
@@ -55,7 +56,7 @@ function Epicycle() {
     const dt = p5.TWO_PI / fourierPath.length;
     time += dt;
 
-    if (time > 1.0 * p5.TWO_PI) resetDrawing();
+    if (time > p5.TWO_PI) resetDrawing();
   };
 
   return <Sketch setup={setup} draw={draw} windowResized={windowResize} />;

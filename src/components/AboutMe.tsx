@@ -1,6 +1,8 @@
 import "../styles/AboutMe.scss";
 
 function AboutMe() {
+  const GithubLink = "https://github.com/brymer-meneses";
+
   return (
     <div className="about-me">
       <div className="about-me__description">
@@ -45,12 +47,17 @@ function AboutMe() {
         <h2>Notable Projects</h2>
         <ul>
           <li>
-            {" "}
-            Lox - an attempt to learn how to create a programming language from
-            scratch.{" "}
+            <a href={GithubLink + "/Lox"}>Lox</a> - an attempt to learn how to
+            create a programming language from scratch.
           </li>
-          <li> PolyLang </li>
-          <li> Synapse </li>
+          <li>
+            <a href={GithubLink + "/PolyLang"}>PolyLang</a> - A work in progress
+            compiler using LLVM
+          </li>
+          <li>
+            <a href={GithubLink + "/Synapse"}>Synapse</a> - A Deep Learning
+            Library written from scratch.
+          </li>
         </ul>
       </div>
     </div>

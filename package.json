@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "generateCoords": "ts-node --esm scripts/generateCoords.ts"
+    "preview": "vite preview"
   },
   "dependencies": {
     "markdown-yaml-metadata-parser": "^3.0.0",

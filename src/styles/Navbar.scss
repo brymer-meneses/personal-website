@@ -16,7 +16,13 @@ nav {
     background-color: #1e1e1e;
     padding: 1rem;
     color: #ffffff;
-    width: max-content;
+    min-width: max-content;
+    cursor: pointer;
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+    }
   }
 
   .nav__links ul {

@@ -1,7 +1,4 @@
-
-
 .home {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,6 +18,7 @@
     h1 {
       font-weight: 200;
       font-style: italic;
+      z-index: 2;
     }
 
     .react-p5 {
@@ -31,7 +29,7 @@
   .blog__dashboard {
     display: flex;
     flex-direction: column;
-    max-width: 80rem;
+    align-items: center;
 
     padding: 0 2rem;
     width: 80vw;
@@ -48,7 +46,16 @@
       font-weight: 200;
       font-size: 2.5rem;
     }
-
   }
 }
 
+@media only screen and (max-width: 800px) {
+  .home {
+    .hero {
+      flex-direction: column;
+    }
+    .react-p5 {
+      max-width: 40rem;
+    }
+  }
+}

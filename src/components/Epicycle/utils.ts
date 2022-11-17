@@ -1,51 +1,49 @@
 import { Fourier, dft } from "./dft";
-import ComplexNumber from './complexNumber';
-import p5Types from "p5"
+import ComplexNumber from "./complexNumber";
+import p5Types from "p5";
 
-import piPath from './paths/pi.json';
-import summationPath from './paths/summation.json'
-import integralPath from './paths/integral.json';
-import zetaPath from './paths/zeta.json';
-import xPath from './paths/x.json';
+import piPath from "./paths/pi.json";
+import summationPath from "./paths/summation.json";
+import integralPath from "./paths/integral.json";
+import xPath from "./paths/x.json";
 
 export interface EpicycleOps {
-  x: number; 
-  y: number; 
-  fourier: Fourier[]; 
-  radius: number; 
+  x: number;
+  y: number;
+  fourier: Fourier[];
+  radius: number;
   rotation: number;
 }
 
 export interface Path {
-  x: number; 
-  y: number; 
+  x: number;
+  y: number;
 }
 
-// array of tuples
-export type RawPath = [number, number][];
-
-export function processPath(pathJson: RawPath) : Fourier[] {
+export function processPath(pathJson: number[][]): Fourier[] {
   let fourierPath: Fourier[] = [];
   let complexPath: ComplexNumber[] = [];
 
-  for (let i=0; i < pathJson.length; i++) {
+  for (let i = 0; i < pathJson.length; i++) {
     complexPath.push(new ComplexNumber(pathJson[i][0], pathJson[i][1]));
   }
   fourierPath = dft(complexPath);
-  fourierPath.sort((a,b) => b.amplitude - a.amplitude) // sort by amplitude
+  fourierPath.sort((a, b) => b.amplitude - a.amplitude); // sort by amplitude
 
   return fourierPath;
 }
 
 export function getRandomCoords() {
-  // @ts-ignore
-  const paths: RawPath[] = [piPath, summationPath, integralPath, zetaPath, xPath];
+  const paths = [piPath, summationPath, integralPath, xPath];
 
   return paths[Math.floor(Math.random() * paths.length)];
-
 }
 
-export function drawEpicycle(p5: p5Types, time:number, ops: EpicycleOps) : Path {
+export function drawEpicycle(
+  p5: p5Types,
+  time: number,
+  ops: EpicycleOps
+): Path {
   for (let i = 0; i < ops.fourier.length; i++) {
     const prevx = ops.x;
     const prevy = ops.y;
@@ -75,9 +73,10 @@ export function drawPath(p5: p5Types, path: Path[]) {
   p5.beginShape();
   p5.noFill();
   p5.strokeWeight(2);
+  p5.stroke("#1E1E1E");
   for (let i = 0; i < path.length; i++) {
     p5.vertex(path[i].x, path[i].y);
   }
+
   p5.endShape();
 }
-

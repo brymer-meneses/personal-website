@@ -6,7 +6,9 @@ const githubLink = "https://www.github.com/brymer-meneses";
 function Navbar() {
   return (
     <nav>
-      <h3 className="nav__title">Brymer Meneses</h3>
+      <h3 className="nav__title">
+        <Link to="/"> Brymer Meneses </Link>
+      </h3>
       <div className="nav__links">
         <ul>
           <li>

@@ -11,7 +11,7 @@ requirement, I decided to start right away. I have wanted to do this for
 so long, even if were on our reading break at that time.
 
 I am of huge fan of minimalistic design, and at the time I was designing this
-website, I was inspired by this[site's](https://harrison.totty.dev/)
+website, I was inspired by this [site's](https://harrison.totty.dev/)
 aesthetic. I knew at that moment, that I would talk about Math, Life or
 Programming, and so I needed some way of displaying code blocks and $\LaTeX$
 rendering.
