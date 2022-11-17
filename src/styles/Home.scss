@@ -22,6 +22,7 @@
 
     .react-p5 {
       width: clamp(10rem, 20vw, 20rem);
+      z-index: -1;
     }
   }
 
